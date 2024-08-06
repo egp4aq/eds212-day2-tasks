@@ -11,3 +11,30 @@ library(tidyverse)
 library(palmerpenguins)
 ```
 
+```{r}
+eq1 <- function(x) {
+  x^2
+}
+
+d_eq1 <- D(expr = expression(x^2), name = "x")
+
+d_eq1_fun <- function(x) {
+  2 * x
+}
+d_eq1_fun(3)
+```
+
+```{r}
+eq2 <- function(a) {
+  2*(3*a+2)^4 - 5
+}
+
+d_eq2 <- D(expr = expression(2*(3*a+2)^4 - 5), name = "a")
+
+d_eq2_fun <- function(a) {
+  2 * (4 * (3 * (3 * a + 2)^3))
+}
+
+d_eq2_fun(1.2)
+```
+
