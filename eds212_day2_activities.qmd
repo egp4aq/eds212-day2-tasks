@@ -38,3 +38,24 @@ d_eq2_fun <- function(a) {
 d_eq2_fun(1.2)
 ```
 
+```{r}
+library(palmerpenguins)
+data(package = 'palmerpenguins')
+penguins <- penguins
+
+ggplot(data = penguins, aes(x = bill_length_mm, y = bill_depth_mm, color = species)) +
+  geom_point() +
+  xlab("Bill Length (mm)") +
+  ylab("Bill Depth (mm)") +
+  ggtitle("Bill Length vs. Bill Depth")
+```
+
+```{r}
+ggplot(data = penguins, aes(x = species, y = flipper_length_mm)) +
+  geom_jitter() +
+  xlab("Species") +
+  ylab("Flipper Length (mm)") +
+  ggtitle("Flipper Length by Species")
+```
+
+
